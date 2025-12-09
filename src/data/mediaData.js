@@ -1,4 +1,5 @@
-// Sample media data with titles and associated gallery images
+// Media data with titles and associated gallery images
+// Note: Uses external image URLs from Unsplash API
 export const mediaItems = [
   {
     id: 1,

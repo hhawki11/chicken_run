@@ -8,7 +8,7 @@ function HomePage() {
 
   const handleScroll = (e) => {
     const scrollLeft = e.target.scrollLeft;
-    const cardWidth = e.target.offsetWidth;
+    const cardWidth = e.target.clientWidth;
     const newIndex = Math.round(scrollLeft / cardWidth);
     setCurrentIndex(newIndex);
   };
