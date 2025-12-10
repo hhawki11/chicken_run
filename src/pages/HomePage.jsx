@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mediaItems } from '../data/mediaData';
+import { mediaItems, getImageUrl } from '../data/mediaData';
 import './HomePage.css';
 
 function HomePage() {
@@ -13,13 +13,19 @@ function HomePage() {
     setCurrentIndex(newIndex);
   };
 
+  const scrollToIndex = (index) => {
+    const container = document.querySelector('.media-container');
+    if (container) {
+      const scrollLeft = index * container.clientWidth;
+      container.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="home-page">
-      <header className="header">
-        <h1>Chicken Run</h1>
-        <p>View the Chicken Run History</p>
-      </header>
-      
       <div 
         className="media-container" 
         onScroll={handleScroll}
@@ -28,7 +34,7 @@ function HomePage() {
           <div key={item.id} className="media-card">
             <div className="image-wrapper">
               <img 
-                src={item.thumbnail} 
+                src={getImageUrl(item.thumbnail)} 
                 alt={item.title}
                 className="media-image"
               />
@@ -48,6 +54,7 @@ function HomePage() {
           <div 
             key={index} 
             className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => scrollToIndex(index)}
           />
         ))}
       </div>

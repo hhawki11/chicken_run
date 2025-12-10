@@ -1,82 +1,343 @@
 // Media data with titles and associated gallery images
-// Note: Uses external image URLs from Unsplash API
+// Organized chronologically by year, with Anniversary → Memorial Day → Meadows of Dan → Labor Day → Fall Foliage → West Coast order
 export const mediaItems = [
+  // 1998
   {
     id: 1,
-    title: "Mountain Landscapes",
-    thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800&h=600&fit=crop"
-    ]
+    title: "Fall Foliage Weekend 1998",
+    folderName: "Fall Foliage Weekend 1998",
+    thumbnail: "/src/img/Fall Foliage Weekend 1998/cover.JPG"
   },
+  // 2001
   {
     id: 2,
-    title: "Ocean Views",
-    thumbnail: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&h=600&fit=crop"
-    ]
+    title: "Memorial Day Weekend 2001",
+    folderName: "Memorial Day Weekend 2001",
+    thumbnail: "/src/img/Memorial Day Weekend 2001/cover.JPG"
   },
   {
     id: 3,
-    title: "City Lights",
-    thumbnail: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop"
-    ]
+    title: "Fall Foliage Weekend 2001",
+    folderName: "Fall Foliage Weekend 2001",
+    thumbnail: "/src/img/Fall Foliage Weekend 2001/cover.JPG"
   },
+  // 2003
   {
     id: 4,
-    title: "Forest Trails",
-    thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?w=800&h=600&fit=crop"
-    ]
+    title: "Fall Foliage Weekend 2003",
+    folderName: "Fall Foliage Weekend 2003",
+    thumbnail: "/src/img/Fall Foliage Weekend 2003/cover.JPG"
   },
+  // 2004
   {
     id: 5,
-    title: "Desert Sunsets",
-    thumbnail: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1682687220208-22d7a2543e88?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?w=800&h=600&fit=crop"
-    ]
+    title: "25th Anniversary Weekend 2004",
+    folderName: "25th Anniversary Weekend 2004",
+    thumbnail: "/src/img/25th Anniversary Weekend 2004/cover.JPG"
   },
   {
     id: 6,
-    title: "Northern Lights",
-    thumbnail: "https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1445264718298-a1e096df6830?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1589802829985-817e51171b92?w=800&h=600&fit=crop"
-    ]
+    title: "Fall Foliage Weekend 2004",
+    folderName: "Fall Foliage Weekend 2004",
+    thumbnail: "/src/img/Fall Foliage Weekend 2004/cover.JPG"
+  },
+  // 2006
+  {
+    id: 7,
+    title: "Fall Foliage Weekend 2006",
+    folderName: "Fall Foliage Weekend 2006",
+    thumbnail: "/src/img/Fall Foliage Weekend 2006/cover.JPG"
+  },
+  // 2007
+  {
+    id: 8,
+    title: "Memorial Day Weekend 2007",
+    folderName: "Memorial Day Weekend 2007",
+    thumbnail: "/src/img/Memorial Day Weekend 2007/cover.JPG"
+  },
+  {
+    id: 9,
+    title: "Meadows of Dan Weekend 2007",
+    folderName: "Meadows of Dan Weekend 2007",
+    thumbnail: "/src/img/Meadows of Dan Weekend 2007/cover.JPG"
+  },
+  {
+    id: 10,
+    title: "Fall Foliage Weekend 2007",
+    folderName: "Fall Foliage Weekend 2007",
+    thumbnail: "/src/img/Fall Foliage Weekend 2007/cover.JPG"
+  },
+  {
+    id: 11,
+    title: "West Coast Chicken Run 2007",
+    folderName: "West Coast Chicken Run 2007",
+    thumbnail: "/src/img/West Coast Chicken Run 2007/cover.JPG"
+  },
+  // 2008
+  {
+    id: 12,
+    title: "Memorial Day Weekend 2008",
+    folderName: "Memorial Day Weekend 2008",
+    thumbnail: "/src/img/Memorial Day Weekend 2008/cover.JPG"
+  },
+  {
+    id: 13,
+    title: "Labor Day Weekend 2008",
+    folderName: "Labor Day Weekend 2008",
+    thumbnail: "/src/img/Labor Day Weekend 2008/cover.JPG"
+  },
+  {
+    id: 14,
+    title: "Fall Foliage Weekend 2008",
+    folderName: "Fall Foliage Weekend 2008",
+    thumbnail: "/src/img/Fall Foliage Weekend 2008/cover.JPG"
+  },
+  // 2009
+  {
+    id: 15,
+    title: "30th Anniversary Weekend 2009",
+    folderName: "30th Anniversary Weekend 2009",
+    thumbnail: "/src/img/30th Anniversary Weekend 2009/cover.JPG"
+  },
+  {
+    id: 16,
+    title: "Labor Day Weekend 2009",
+    folderName: "Labor Day Weekend 2009",
+    thumbnail: "/src/img/Labor Day Weekend 2009/cover.JPG"
+  },
+  // 2010
+  {
+    id: 17,
+    title: "Memorial Day Weekend 2010",
+    folderName: "Memorial Day Weekend 2010",
+    thumbnail: "/src/img/Memorial Day Weekend 2010/cover.JPG"
+  },
+  {
+    id: 18,
+    title: "Labor Day Weekend 2010",
+    folderName: "Labor Day Weekend 2010",
+    thumbnail: "/src/img/Labor Day Weekend 2010/cover.JPG"
+  },
+  {
+    id: 19,
+    title: "Fall Foliage Weekend 2010",
+    folderName: "Fall Foliage Weekend 2010",
+    thumbnail: "/src/img/Fall Foliage Weekend 2010/cover.JPG"
+  },
+  // 2011
+  {
+    id: 20,
+    title: "Memorial Day Weekend 2011",
+    folderName: "Memorial Day Weekend 2011",
+    thumbnail: "/src/img/Memorial Day Weekend 2011/cover.JPG"
+  },
+  {
+    id: 21,
+    title: "Labor Day Weekend 2011",
+    folderName: "Labor Day Weekend 2011",
+    thumbnail: "/src/img/Labor Day Weekend 2011/cover.JPG"
+  },
+  {
+    id: 22,
+    title: "Fall Foliage Weekend 2011",
+    folderName: "Fall Foliage Weekend 2011",
+    thumbnail: "/src/img/Fall Foliage Weekend 2011/cover.JPG"
+  },
+  // 2012
+  {
+    id: 23,
+    title: "Memorial Day Weekend 2012",
+    folderName: "Memorial Day Weekend 2012",
+    thumbnail: "/src/img/Memorial Day Weekend 2012/cover.JPG"
+  },
+  {
+    id: 24,
+    title: "Labor Day Weekend 2012",
+    folderName: "Labor Day Weekend 2012",
+    thumbnail: "/src/img/Labor Day Weekend 2012/cover.JPG"
+  },
+  {
+    id: 25,
+    title: "Fall Foliage Weekend 2012",
+    folderName: "Fall Foliage Weekend 2012",
+    thumbnail: "/src/img/Fall Foliage Weekend 2012/cover.JPG"
+  },
+  // 2013
+  {
+    id: 26,
+    title: "Memorial Day Weekend 2013",
+    folderName: "Memorial Day Weekend 2013",
+    thumbnail: "/src/img/Memorial Day Weekend 2013/cover.JPG"
+  },
+  {
+    id: 27,
+    title: "Labor Day Weekend 2013",
+    folderName: "Labor Day Weekend 2013",
+    thumbnail: "/src/img/Labor Day Weekend 2013/cover.JPG"
+  },
+  {
+    id: 28,
+    title: "Fall Foliage Weekend 2013",
+    folderName: "Fall Foliage Weekend 2013",
+    thumbnail: "/src/img/Fall Foliage Weekend 2013/cover.JPG"
+  },
+  // 2014
+  {
+    id: 29,
+    title: "35th Anniversary Weekend 2014",
+    folderName: "35th Anniversary Weekend 2014",
+    thumbnail: "/src/img/35th Anniversary Weekend 2014/cover.JPG"
+  },
+  {
+    id: 30,
+    title: "Labor Day Weekend 2014",
+    folderName: "Labor Day Weekend 2014",
+    thumbnail: "/src/img/Labor Day Weekend 2014/cover.JPG"
+  },
+  {
+    id: 31,
+    title: "Fall Foliage Weekend 2014",
+    folderName: "Fall Foliage Weekend 2014",
+    thumbnail: "/src/img/Fall Foliage Weekend 2014/cover.JPG"
+  },
+  // 2015
+  {
+    id: 32,
+    title: "Memorial Day Weekend 2015",
+    folderName: "Memorial Day Weekend 2015",
+    thumbnail: "/src/img/Memorial Day Weekend 2015/cover.JPG"
+  },
+  {
+    id: 33,
+    title: "Labor Day Weekend 2015",
+    folderName: "Labor Day Weekend 2015",
+    thumbnail: "/src/img/Labor Day Weekend 2015/cover.JPG"
+  },
+  {
+    id: 34,
+    title: "Fall Foliage Weekend 2015",
+    folderName: "Fall Foliage Weekend 2015",
+    thumbnail: "/src/img/Fall Foliage Weekend 2015/cover.JPG"
+  },
+  // 2016
+  {
+    id: 35,
+    title: "Memorial Day Weekend 2016",
+    folderName: "Memorial Day Weekend 2016",
+    thumbnail: "/src/img/Memorial Day Weekend 2016/cover.JPG"
+  },
+  {
+    id: 36,
+    title: "Labor Day Weekend 2016",
+    folderName: "Labor Day Weekend 2016",
+    thumbnail: "/src/img/Labor Day Weekend 2016/cover.JPG"
+  },
+  {
+    id: 37,
+    title: "Fall Foliage Weekend 2016",
+    folderName: "Fall Foliage Weekend 2016",
+    thumbnail: "/src/img/Fall Foliage Weekend 2016/cover.JPG"
+  },
+  // 2017
+  {
+    id: 38,
+    title: "Memorial Day Weekend 2017",
+    folderName: "Memorial Day Weekend 2017",
+    thumbnail: "/src/img/Memorial Day Weekend 2017/cover.JPG"
+  },
+  {
+    id: 39,
+    title: "Labor Day Weekend 2017",
+    folderName: "Labor Day Weekend 2017",
+    thumbnail: "/src/img/Labor Day Weekend 2017/cover.JPG"
+  },
+  {
+    id: 40,
+    title: "Fall Foliage Weekend 2017",
+    folderName: "Fall Foliage Weekend 2017",
+    thumbnail: "/src/img/Fall Foliage Weekend 2017/cover.JPG"
+  },
+  // 2018
+  {
+    id: 41,
+    title: "Memorial Day Weekend 2018",
+    folderName: "Memorial Day Weekend 2018",
+    thumbnail: "/src/img/Memorial Day Weekend 2018/cover.JPG"
+  },
+  {
+    id: 42,
+    title: "Labor Day Weekend 2018",
+    folderName: "Labor Day Weekend 2018",
+    thumbnail: "/src/img/Labor Day Weekend 2018/cover.JPG"
+  },
+  {
+    id: 43,
+    title: "Fall Foliage Weekend 2018",
+    folderName: "Fall Foliage Weekend 2018",
+    thumbnail: "/src/img/Fall Foliage Weekend 2018/cover.JPG"
+  },
+  // 2019
+  {
+    id: 44,
+    title: "40th Anniversary Weekend 2019",
+    folderName: "40th Anniversary Weekend 2019",
+    thumbnail: "/src/img/40th Anniversary Weekend 2019/cover.JPG"
+  },
+  {
+    id: 45,
+    title: "Labor Day Weekend 2019",
+    folderName: "Labor Day Weekend 2019",
+    thumbnail: "/src/img/Labor Day Weekend 2019/cover.JPG"
+  },
+  {
+    id: 46,
+    title: "Fall Foliage Weekend 2019",
+    folderName: "Fall Foliage Weekend 2019",
+    thumbnail: "/src/img/Fall Foliage Weekend 2019/cover.JPG"
+  },
+  // 2020
+  {
+    id: 47,
+    title: "Memorial Day Weekend 2020",
+    folderName: "Memorial Day Weekend 2020",
+    thumbnail: "/src/img/Memorial Day Weekend 2020/cover.JPG"
+  },
+  {
+    id: 48,
+    title: "Labor Day Weekend 2020",
+    folderName: "Labor Day Weekend 2020",
+    thumbnail: "/src/img/Labor Day Weekend 2020/cover.JPG"
+  },
+  // 2021
+  {
+    id: 49,
+    title: "Memorial Day Weekend 2021",
+    folderName: "Memorial Day Weekend 2021",
+    thumbnail: "/src/img/Memorial Day Weekend 2021/cover.JPG"
+  },
+  {
+    id: 50,
+    title: "Labor Day Weekend 2021",
+    folderName: "Labor Day Weekend 2021",
+    thumbnail: "/src/img/Labor Day Weekend 2021/cover.JPG"
+  },
+  // 2022
+  {
+    id: 51,
+    title: "Memorial Day Weekend 2022",
+    folderName: "Memorial Day Weekend 2022",
+    thumbnail: "/src/img/Memorial Day Weekend 2022/cover.JPG"
+  },
+  // 2024
+  {
+    id: 52,
+    title: "Fall Foliage Weekend 2024",
+    folderName: "Fall Foliage Weekend 2024",
+    thumbnail: "/src/img/Fall Foliage Weekend 2024/cover.JPG"
   }
 ];
+
+// Helper function to get image URL for Vite
+export const getImageUrl = (imagePath) => {
+  return new URL(imagePath, import.meta.url).href;
+};
