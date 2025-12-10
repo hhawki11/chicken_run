@@ -37,6 +37,10 @@ function HomePage() {
                 src={getImageUrl(item.thumbnail)} 
                 alt={item.title}
                 className="media-image"
+                onError={(e) => {
+                  console.error('Failed to load image:', item.thumbnail);
+                  e.target.style.display = 'none';
+                }}
               />
             </div>
             <div className="media-info">

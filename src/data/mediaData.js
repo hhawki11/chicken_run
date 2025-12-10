@@ -337,7 +337,35 @@ export const mediaItems = [
   }
 ];
 
-// Helper function to get image URL for Vite
+// Use Vite's import.meta.glob to load all cover images
+const coverImages = import.meta.glob('/src/img/**/cover.{jpg,JPG,jpeg,JPEG}', { eager: true });
+
+// Debug: log what cover images were found
+console.log('Loaded cover images:', Object.keys(coverImages));
+
+// Helper function to get image URL that works in both dev and production
 export const getImageUrl = (imagePath) => {
-  return new URL(imagePath, import.meta.url).href;
+  // Handle absolute URLs (for Cloudinary or external sources)
+  if (imagePath.startsWith('http')) {
+    return imagePath;
+  }
+  
+  // For cover images, use the preloaded imports
+  if (imagePath.includes('cover.')) {
+    const matchingImport = coverImages[imagePath];
+    if (matchingImport) {
+      return matchingImport.default || matchingImport;
+    } else {
+      console.warn('Cover image not found in imports:', imagePath);
+      console.log('Available cover images:', Object.keys(coverImages));
+    }
+  }
+  
+  // Fallback: try to create URL directly (may not work in production)
+  try {
+    return new URL(imagePath, import.meta.url).href;
+  } catch (error) {
+    console.warn('Error loading image:', imagePath, error);
+    return imagePath;
+  }
 };
