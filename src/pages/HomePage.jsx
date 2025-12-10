@@ -16,8 +16,8 @@ function HomePage() {
   return (
     <div className="home-page">
       <header className="header">
-        <h1>Media Viewer</h1>
-        <p>Scroll through our collection</p>
+        <h1>Chicken Run</h1>
+        <p>View the Chicken Run History</p>
       </header>
       
       <div 
