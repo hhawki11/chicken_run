@@ -1,0 +1,619 @@
+.info-detail-page {
+  min-height: 100vh;
+  background: #000000;
+  color: white;
+  padding: 2rem;
+}
+
+.detail-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.detail-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.detail-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.content-section h2 {
+  color: #4a90e2;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.content-section h2:first-child {
+  margin-top: 0;
+}
+
+.content-section h3 {
+  color: #87ceeb;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.content-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.content-section ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.content-section li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.content-section li strong {
+  color: white;
+  font-weight: 600;
+}
+
+.highlight-box {
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+
+.highlight-box h3 {
+  color: #4a90e2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Event-specific styles for NextRunPage */
+.event-announcement {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.event-title {
+  color: #4a90e2;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.live-status {
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.live-status.status-green {
+  background: rgba(0, 128, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.live-status.status-orange {
+  background: rgba(255, 140, 0, 0.2);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.live-status.status-red {
+  background: rgba(220, 20, 60, 0.2);
+  border: 1px solid rgba(255, 99, 71, 0.3);
+}
+
+.status-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.live-status h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.live-status.status-green h3 {
+  color: #00ff00;
+}
+
+.live-status.status-orange h3 {
+  color: #ffa500;
+}
+
+.live-status.status-red h3 {
+  color: #ff6347;
+}
+
+.no-event {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.no-event p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.live-status p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.event-details {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.event-details h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.details-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+  padding-top: 30px ;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #87ceeb;
+  min-width: 120px;
+}
+
+.detail-value {
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.preparation-section {
+  background: rgba(139, 69, 19, 0.2);
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.preparation-section h3 {
+  color: #daa520;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.preparation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.preparation-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.preparation-list li:last-child {
+  border-bottom: none;
+}
+
+.preparation-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #daa520;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-detail-page {
+    padding: 1rem;
+  }
+  
+  .detail-content h1 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .content-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .content-section p,
+  .content-section li {
+    font-size: 1rem;
+  }
+  
+  .highlight-box {
+    padding: 1.5rem;
+  }
+  
+  .event-title {
+    font-size: 1.5rem;
+  }
+  
+  .event-details,
+  .preparation-section {
+    padding: 1.5rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .detail-label {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+  
+  .detail-value {
+    font-size: 0.9rem;
+  }
+  
+  .preparation-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* History Page Specific Styles */
+.info-page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.info-page-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+  color: #4a90e2;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.info-section h2:first-child {
+  margin-top: 0;
+}
+
+.info-section h3 {
+  color: #87ceeb;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.info-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.info-section em {
+  color: #87ceeb;
+  font-style: italic;
+}
+
+.opening-quote {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(135, 206, 235, 0.1) 100%);
+  border-left: 4px solid #4a90e2;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.opening-quote cite {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  color: #4a90e2;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.recipe-section {
+  background: rgba(139, 69, 19, 0.2);
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.recipe-section h3 {
+  color: #daa520;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.recipe-ingredients ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.recipe-ingredients li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.recipe-ingredients li:last-child {
+  border-bottom: none;
+}
+
+.recipe-ingredients li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #daa520;
+  font-weight: bold;
+}
+
+.recipe-instructions {
+  margin-top: 1rem;
+}
+
+.recipe-instructions p {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.founder-section {
+  margin: 3rem 0;
+}
+
+.founder-profile {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+.founder-image {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-text {
+  flex: 1;
+}
+
+.founder-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.founder-text strong {
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+.info-section ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.info-section ol li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments for History page */
+@media (max-width: 768px) {
+  .info-page-content h1 {
+    font-size: 2rem;
+  }
+  
+  .info-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .info-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .founder-profile {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .founder-image {
+    width: 150px;
+    align-self: center;
+  }
+  
+  .opening-quote {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .recipe-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Trip Types Page Specific Styles */
+.trip-types {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.trip-type {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.trip-type h3 {
+  color: #4a90e2;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trip-type p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile responsive adjustments for trip types */
+@media (max-width: 768px) {
+  .trip-type {
+    padding: 1.5rem;
+  }
+  
+  .trip-type h3 {
+    font-size: 1.2rem;
+  }
+  
+  .trip-type p {
+    font-size: 1rem;
+  }
+}

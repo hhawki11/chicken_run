@@ -1,6 +1,15 @@
 // Media data with titles and associated gallery images
-// Organized chronologically by year, with Anniversary → Memorial Day → Meadows of Dan → Labor Day → Fall Foliage → West Coast order
+// Organized chronologically by year (1998-2024), with Anniversary → Memorial Day → Meadows of Dan → Labor Day → Fall Foliage → West Coast order
+// Note: HomePage displays these in reverse order (most recent first), with Information gallery appearing first
 export const mediaItems = [
+  // Information (Special - appears first on homepage)
+  {
+    id: 0,
+    title: "Chicken Run Information",
+    folderName: "Information",
+    thumbnail: "/src/img/Information/cover.JPG",
+    buttonText: "View Information"
+  },
   // 1998
   {
     id: 1,

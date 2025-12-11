@@ -24,13 +24,22 @@ function HomePage() {
     }
   };
 
+  // Create display order: Information first, then chronological events in reverse
+  const getDisplayOrder = () => {
+    const infoItem = mediaItems.find(item => item.id === 0);
+    const otherItems = mediaItems.filter(item => item.id !== 0).slice().reverse();
+    return infoItem ? [infoItem, ...otherItems] : otherItems;
+  };
+
+  const displayItems = getDisplayOrder();
+
   return (
     <div className="home-page">
       <div 
         className="media-container" 
         onScroll={handleScroll}
       >
-        {mediaItems.map((item) => (
+        {displayItems.map((item) => (
           <div key={item.id} className="media-card">
             <div className="image-wrapper">
               <img 
@@ -46,7 +55,9 @@ function HomePage() {
             <div className="media-info">
               <h2 className="media-title">{item.title}</h2>
               <Link to={`/gallery/${item.id}`}>
-                <button className="view-gallery-btn">View Gallery</button>
+                <button className="view-gallery-btn">
+                  {item.buttonText || "View Gallery"}
+                </button>
               </Link>
             </div>
           </div>
@@ -54,7 +65,7 @@ function HomePage() {
       </div>
 
       <div className="scroll-indicator">
-        {mediaItems.map((_, index) => (
+        {displayItems.map((_, index) => (
           <div 
             key={index} 
             className={`dot ${index === currentIndex ? 'active' : ''}`}

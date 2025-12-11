@@ -109,7 +109,7 @@ The project uses ESLint for code quality. Run `npm run lint` to check for issues
 
 ## Design Features
 
-- **Gradient Background** - Beautiful purple gradient (from #667eea to #764ba2)
+- **Black Background** - Clean, minimalist black background throughout the app
 - **Smooth Animations** - Hover effects and transitions throughout
 - **Responsive Design** - Mobile-first approach with breakpoints at 768px and 480px
 - **Scroll Snap** - Precise card-by-card scrolling on homepage

@@ -1,0 +1,161 @@
+.information-page {
+  height: 100vh;
+  background: #000000;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.info-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  color: #4a90e2;
+}
+
+.info-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.info-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-height: 140px;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .info-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .back-button {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  
+  .info-header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .information-page {
+    padding: 0.8rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .info-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .info-header p {
+    font-size: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.2rem 0.8rem;
+    min-height: 120px;
+  }
+  
+  .info-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .info-title {
+    font-size: 0.9rem;
+  }
+  
+  .back-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
