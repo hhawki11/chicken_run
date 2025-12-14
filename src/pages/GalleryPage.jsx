@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { mediaItems } from '../data/mediaData';
+import { mediaItems, getImageUrl } from '../data/mediaData';
 import './GalleryPage.css';
 
 function GalleryPage() {
@@ -53,6 +53,18 @@ function GalleryPage() {
     document.body.style.overflow = 'auto'; // Restore scrolling
   };
 
+  const downloadImage = () => {
+    if (selectedImageIndex === null || !galleryImages[selectedImageIndex]) return;
+    
+    const image = galleryImages[selectedImageIndex];
+    const link = document.createElement('a');
+    link.href = image.url;
+    link.download = `${mediaItem.title.replace(/\s+/g, '_')}_${selectedImageIndex + 1}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const navigateImage = (direction) => {
     if (galleryImages.length === 0) return;
     
@@ -89,15 +101,25 @@ function GalleryPage() {
 
   return (
     <div className="gallery-page">
+      {/* Blurred background */}
+      <div 
+        className="gallery-background-blur"
+        style={{
+          backgroundImage: mediaItem ? `url(${getImageUrl(mediaItem.thumbnail)})` : 'none'
+        }}
+      />
+      
       <header className="gallery-header">
-        <Link to="/" className="back-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div className="gallery-title-section">
+          <h1>{mediaItem.title}</h1>
+          <p className="gallery-count">{loading ? 'Loading...' : `${galleryImages.length} images`}</p>
+        </div>
+        <Link to="/" className="gallery-back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
           </svg>
           Back to Home
         </Link>
-        <h1>{mediaItem.title}</h1>
-        <p className="gallery-count">{loading ? 'Loading...' : `${galleryImages.length} images`}</p>
       </header>
 
       <div className="gallery-grid">
@@ -131,12 +153,22 @@ function GalleryPage() {
       {showLightbox && selectedImageIndex !== null && (
         <div className="lightbox-overlay" onClick={closeLightbox}>
           <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-download" onClick={downloadImage}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+            
             <button className="lightbox-close" onClick={closeLightbox}>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
+
+            
 
             <button 
               className="lightbox-nav lightbox-prev" 

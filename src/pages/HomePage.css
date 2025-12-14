@@ -3,6 +3,23 @@
   display: flex;
   flex-direction: column;
   background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-blur {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(40px);
+  opacity: 0.4;
+  z-index: 0;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .media-container {
@@ -14,6 +31,8 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  position: relative;
+  z-index: 1;
 }
 
 .media-container::-webkit-scrollbar {
@@ -31,9 +50,9 @@
 }
 
 .image-wrapper {
-  width: 90%;
-  max-width: 600px;
-  max-height: 60vh;
+  width: 95%;
+  max-width: 900px;
+  max-height: 75vh;
   aspect-ratio: 4/3;
   border-radius: 20px;
   overflow: hidden;
@@ -88,6 +107,8 @@
   align-items: center;
   padding: 1rem;
   gap: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .dot {
@@ -125,6 +146,7 @@
   }
   
   .image-wrapper {
-    max-height: 50vh;
+    max-height: 65vh;
+    width: 95%;
   }
 }

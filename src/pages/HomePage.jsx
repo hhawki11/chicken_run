@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { mediaItems, getImageUrl } from '../data/mediaData';
 import './HomePage.css';
@@ -32,34 +32,18 @@ function HomePage() {
   };
 
   const displayItems = getDisplayOrder();
-
-  // Handle wheel events for horizontal scrolling
-  useEffect(() => {
-    const handleWheel = (e) => {
-      // Only handle wheel events on the home page
-      if (!document.querySelector('.home-page')) return;
-      
-      e.preventDefault();
-      
-      const container = document.querySelector('.media-container');
-      if (!container) return;
-      
-      // Translate vertical scroll to horizontal
-      const scrollAmount = e.deltaY * 0.8; // Adjust sensitivity
-      container.scrollLeft += scrollAmount;
-    };
-
-    // Add wheel event listener to the document
-    document.addEventListener('wheel', handleWheel, { passive: false });
-    
-    // Cleanup on component unmount
-    return () => {
-      document.removeEventListener('wheel', handleWheel);
-    };
-  }, []);
+  const currentItem = displayItems[currentIndex];
 
   return (
     <div className="home-page">
+      {/* Blurred background */}
+      <div 
+        className="background-blur"
+        style={{
+          backgroundImage: currentItem ? `url(${getImageUrl(currentItem.thumbnail)})` : 'none'
+        }}
+      />
+      
       <div 
         className="media-container" 
         onScroll={handleScroll}

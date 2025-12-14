@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getImageUrl } from '../data/mediaData';
 import './InformationPage.css';
 
 function InformationPage() {
@@ -43,7 +44,15 @@ function InformationPage() {
 
   return (
     <div className="information-page">
-        <Link to="/" className="back-button">
+      {/* Blurred background */}
+      <div 
+        className="info-background-blur"
+        style={{
+          backgroundImage: `url(${getImageUrl('/src/img/Information/cover.JPG')})`
+        }}
+      />
+      
+      <Link to="/" className="back-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
           </svg>

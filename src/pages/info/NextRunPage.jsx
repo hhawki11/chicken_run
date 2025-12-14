@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { nextEventData } from '../../data/eventData';
+import { getImageUrl } from '../../data/mediaData';
 import './InfoDetailPage.css';
 
 function NextRunPage() {
@@ -71,6 +72,14 @@ function NextRunPage() {
   const eventStatus = getEventStatus();
   return (
     <div className="info-detail-page">
+      {/* Blurred background */}
+      <div 
+        className="info-detail-background-blur"
+        style={{
+          backgroundImage: `url(${getImageUrl('/src/img/Information/cover.JPG')})`
+        }}
+      />
+      
       <header className="detail-header">
         <Link to="/gallery/0" className="back-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

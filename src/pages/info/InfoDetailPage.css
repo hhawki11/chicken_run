@@ -3,11 +3,29 @@
   background: #000000;
   color: white;
   padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.info-detail-background-blur {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .detail-header {
   max-width: 1200px;
   margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .back-button {
@@ -35,6 +53,8 @@
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.7;
+  position: relative;
+  z-index: 1;
 }
 
 .detail-icon {
@@ -361,6 +381,8 @@
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.7;
+  position: relative;
+  z-index: 1;
 }
 
 .info-page-content h1 {
