@@ -139,7 +139,7 @@ function HistoryPage() {
           <div className="founder-section">
             <div className="founder-profile">
               <div className="founder-image">
-                <img src="/founders/john-holt-bmw.jpg" alt="John Holt on his BMW R1100RT" />
+                <img src={getImageUrl('/src/img/founders/john-holt-bmw.jpg')} alt="John Holt on his BMW R1100RT" />
               </div>
               <div className="founder-text">
                 <p>
@@ -154,7 +154,7 @@ function HistoryPage() {
           <div className="founder-section">
             <div className="founder-profile">
               <div className="founder-image">
-                <img src="/founders/john-holt-bmw.jpg" alt="John Holt on his BMW R1100RT" />
+                <img src={getImageUrl('/src/img/founders/lyons.jpg')} alt="John Lyons on his Suzuki GS1000E" />
               </div>
               <div className="founder-text">
                 <p>
@@ -172,7 +172,7 @@ function HistoryPage() {
           <div className="founder-section">
             <div className="founder-profile">
               <div className="founder-image">
-                <img src="/founders/john-holt-bmw.jpg" alt="John Holt on his BMW R1100RT" />
+                <img src={getImageUrl('/src/img/founders/walls.jpg')} alt="Forrest Walls with his Triumph" />
               </div>
               <div className="founder-text">
                 <p>

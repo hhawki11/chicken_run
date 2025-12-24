@@ -23,7 +23,6 @@ function AfterPage() {
       </header>
 
       <div className="detail-content">
-        <div className="detail-icon">🚀</div>
         <h1>After the Ride</h1>
         
         <div className="content-section">

@@ -25,7 +25,7 @@
 
 .info-header {
   max-width: 1200px;
-  margin: 0 auto 2rem;
+  margin: 9% auto 2rem;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -71,10 +71,10 @@
 }
 
 .info-grid {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
   flex: 1;
   position: relative;
@@ -95,7 +95,8 @@
   text-align: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  min-height: 140px;
+  min-height: 100px;
+  max-height: 250px;
 }
 
 .info-card:hover {

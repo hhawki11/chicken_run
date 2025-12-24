@@ -349,11 +349,20 @@ export const mediaItems = [
 // Use Vite's import.meta.glob to load all cover images
 const coverImages = import.meta.glob('/src/img/**/cover.{jpg,JPG,jpeg,JPEG}', { eager: true });
 
+// Use Vite's import.meta.glob to load all founder images
+const founderImages = import.meta.glob('/src/img/founders/*.{jpg,JPG,jpeg,JPEG}', { eager: true });
+
+// Use Vite's import.meta.glob to load all rider images
+const riderImages = import.meta.glob('/src/img/riders/*.{jpg,JPG,jpeg,JPEG}', { eager: true });
+
 // Debug: log what cover images were found
 console.log('Loaded cover images:', Object.keys(coverImages));
+console.log('Loaded founder images:', Object.keys(founderImages));
+console.log('Loaded rider images:', Object.keys(riderImages));
 
 // Helper function to get image URL that works in both dev and production
 export const getImageUrl = (imagePath) => {
+  console.log('Getting image URL for path:', imagePath);
   // Handle absolute URLs (for Cloudinary or external sources)
   if (imagePath.startsWith('http')) {
     return imagePath;
@@ -370,9 +379,35 @@ export const getImageUrl = (imagePath) => {
     }
   }
   
+  // For founder images, use the preloaded imports
+  if (imagePath.includes('founders/')) {
+    const matchingImport = founderImages[imagePath];
+    if (matchingImport) {
+      return matchingImport.default || matchingImport;
+    } else {
+      console.warn('Founder image not found in imports:', imagePath);
+      console.log('Available founder images:', Object.keys(founderImages));
+    }
+  }
+  
+  // For rider images, use the preloaded imports
+  if (imagePath.includes('riders/')) {
+    const matchingImport = riderImages[imagePath];
+    if (matchingImport) {
+      const url = matchingImport.default || matchingImport;
+      console.log('Found rider image:', imagePath, '→', url);
+      return url;
+    } else {
+      console.warn('Rider image not found in imports:', imagePath);
+      console.log('Available rider images:', Object.keys(riderImages));
+    }
+  }
+  
   // Fallback: try to create URL directly (may not work in production)
   try {
-    return new URL(imagePath, import.meta.url).href;
+    const url = new URL(imagePath, import.meta.url).href;
+    console.log('Using fallback URL for:', imagePath, '→', url);
+    return url;
   } catch (error) {
     console.warn('Error loading image:', imagePath, error);
     return imagePath;

@@ -17,12 +17,6 @@ function InformationPage() {
       path: '/info/history'
     },
     {
-      id: 'early-runs',
-      title: 'Chicken Runs from the early 1980s',
-      emoji: '🗺️',
-      path: '/info/early-runs'
-    },
-    {
       id: 'roads',
       title: 'Favorite Roads of the Chicken Run',
       emoji: '📸',
@@ -33,12 +27,6 @@ function InformationPage() {
       title: 'Riders of the Chicken Run',
       emoji: '📅',
       path: '/info/riders'
-    },
-    {
-      id: 'after',
-      title: 'After the Ride',
-      emoji: '🚀',
-      path: '/info/after'
     }
   ];
 

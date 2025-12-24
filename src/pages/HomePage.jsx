@@ -24,6 +24,16 @@ function HomePage() {
     }
   };
 
+  const navigatePrev = () => {
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : displayItems.length - 1;
+    scrollToIndex(newIndex);
+  };
+
+  const navigateNext = () => {
+    const newIndex = currentIndex < displayItems.length - 1 ? currentIndex + 1 : 0;
+    scrollToIndex(newIndex);
+  };
+
   // Create display order: Information first, then chronological events in reverse
   const getDisplayOrder = () => {
     const infoItem = mediaItems.find(item => item.id === 0);
@@ -72,6 +82,30 @@ function HomePage() {
           </div>
         ))}
       </div>
+
+      {/* Navigation Arrows */}
+      {currentIndex > 0 && (
+        <button 
+          className="nav-arrow nav-arrow-left" 
+          onClick={navigatePrev}
+          aria-label="Previous image"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+      )}
+      {currentIndex < displayItems.length - 1 && (
+        <button 
+          className="nav-arrow nav-arrow-right" 
+          onClick={navigateNext}
+          aria-label="Next image"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      )}
 
       <div className="scroll-indicator">
         {displayItems.map((_, index) => (
