@@ -25,7 +25,7 @@ function InformationPage() {
     {
       id: 'riders',
       title: 'Riders of the Chicken Run',
-      emoji: '📅',
+      emoji: '👤',
       path: '/info/riders'
     }
   ];
